@@ -147,3 +147,38 @@ function printBanner(var1){
 let makeBanner = printBanner('Rodger');
 console.log(makeBanner);
 
+function leetSpeak(var1){
+
+    myArr = var1.split(''); //<-- make a string a array
+    myArrLength = myArr.length; // <--- Get length of array
+    for(i = 0; i <= myArrLength; i++){ // <-- Loop through array
+        if(myArr[i] === 'A'|| myArr[i] === 'a'){      //<-- find letter in array
+            myArr[i] = '4' //<--replace letter with number
+        }
+        if(myArr[i] === 'E' || myArr[i] === 'e'){
+            myArr[i] = '3';
+        }
+        if(myArr[i] === 'G' || myArr[i] === 'g'){
+            myArr[i] = '6';
+        }
+        if(myArr[i] === 'I'|| myArr[i] === 'i'){
+            myArr[i] = '1'
+        }
+        if(myArr[i] === 'O' || myArr[i] === 'o'){
+            myArr[i] = '0';
+        }
+        if(myArr[i] === 'S' || myArr[i] === 's'){
+            myArr[i] = '5';
+        }
+        if(myArr[i] === 'T' || myArr[i] === 't'){
+            myArr[i] = '7'
+        }
+    }
+    lWord = myArr.join('');// <-- Convert array back into a string
+    return lWord;
+}
+
+leetWord = leetSpeak();
+
+console.log(leetWord);
+
